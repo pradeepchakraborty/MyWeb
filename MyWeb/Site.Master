@@ -1,0 +1,136 @@
+﻿<%@ Master CodeBehind="Site.master.cs" Inherits="MyWeb.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="pradeep.c, pradeep chakraborty, pradeep">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+    <!-- Boostrap Core CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Animate CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Qwigley" />
+    <!-- Font awesome -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <title class="brand wow fadeIn"><%: Page.Title %> - Pradeep.C</title> 
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+        <hr />
+        <!-- Start wrapper -->
+        <div class="wrapper">
+            <div class="col-md-12">
+                <!-- Logo -->
+                <div class="brand wow fadeIn" data-wow-delay="0.1s">
+                    Pradeep Chakraborty
+                   
+           <div class="title">- Senior Software Developer -  </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                        <div class="navbar-brand">
+                            <a href="#">Pradeep.C</a>
+                        </div>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="Default.aspx">Home</a>
+                            </li>
+                            <li>
+                                <a href="Employment.aspx">Employment</a>
+                            </li>
+                           <li>
+     <a href="SystemSkills.aspx">System Skills</a>
+ </li>
+                            <li>
+                                <a href="Gallery.aspx">Gallery</a>
+                            </li>
+                           
+                            <li>
+                                <a href="Contact.aspx">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /navbar-collapse -->
+                </nav>
+                <div class="container body-content">
+                </div>
+            </div>
+            <hr />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+            <footer>
+                <!-- Start footer -->
+                <div class="footer col-md-6 col-xs-offset-3">
+                    <h5>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</h5>
+
+                   <%-- <a href="https://www.facebook.com/Abhin.Google"><i class="fa fa-facebook fa-1x icon1"></i></a>
+                    <a href="www.linkedin.com/in/pradeep-chakraborty-124190175"><i class="fa fa-linkedin fa-1x icon1"></i></a>--%>
+                    
+                </div>
+                <!-- End footer -->
+
+            </footer>
+        </div>
+   
+
+    <!-- End nav -->
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+    </asp:PlaceHolder>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+    <!-- Boostrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Smooth scroll JS -->
+    <script src="js/smoothscroll.js"></script>
+
+    <!-- Wow JavaScript -->
+    <script src="js/wow.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+</html>
+
